@@ -34,7 +34,7 @@ return (
             </ul>
         </div>
         <div className="navbar-end">
-            <a className="btn rounded-full ">Contact Me</a>
+            <a className="btn rounded-full bg-black text-white ">Contact Me</a>
         </div>
     </div>
 );
