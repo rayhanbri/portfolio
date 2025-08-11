@@ -1,0 +1,79 @@
+.hero {
+    display: flex;
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Left Section */
+.hero-left {
+    flex: 1;
+    background: #e5e5e5;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    clip-path: polygon(0 0, 80% 0, 70% 100%, 0% 100%);
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.intro {
+    font-size: 1.2rem;
+}
+
+.name {
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+.role {
+    color: gray;
+    margin-bottom: 1.5rem;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-icons a {
+    background: white;
+    padding: 0.5rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Right Section */
+.hero-right {
+    flex: 1;
+    background: black;
+    color: white;
+    position: relative;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    gap: 2rem;
+    padding: 1.5rem 3rem;
+    align-items: center;
+}
+
+.contact-btn {
+    background: white;
+    color: black;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.profile-img {
+    position: absolute;
+    bottom: 0;
+    right: 10%;
+    max-height: 80%;
+}
