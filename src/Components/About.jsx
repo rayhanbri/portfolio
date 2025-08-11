@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 const About = () => {
     return (
-        <section id="about" className="bg-gray-100 py-20 px-6 md:px-20 font-poppins">
+        <section id="about" className="bg-[#D7D7D7]  py-5 px-6 md:px-20 ">
             <div className="flex flex-col md:flex-row items-center gap-12">
 
                 {/* Image Section */}
