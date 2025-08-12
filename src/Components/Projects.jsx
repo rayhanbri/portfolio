@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import metronest from "../assets/Screenshot 2025-08-12 183100.png"
 import marathon from "../assets/marathon.png"
+import { Element } from "react-scroll";
 
 const projects = [
   {
@@ -42,61 +43,64 @@ const cardVariants = {
 
 const Projects = () => {
   return (
-    <section className="bg-[#D7D7D7]  py-12">
-      <div className="max-w-5xl mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-8">My Projects</h2>
-        <div className="grid md:grid-cols-2 gap-8">
-          {projects.map((project, index) => (
-            <motion.div
-              key={index}
-              className="bg-white rounded-xl shadow-lg transition p-6 flex flex-col hover:shadow-xl"
-              initial="offscreen"
-              whileInView="onscreen"
-              viewport={{ once: true, amount: 0.5 }}
-              variants={cardVariants}
-              whileHover={{ scale: 1.03 }}
-            >
-              <img
-                src={project.image}
-                alt={`${project.title} screenshot`}
-                className="w-full h-48 object-cover rounded-lg mb-4"
-              />
+    <Element name="projects">
+      <section className="bg-[#D7D7D7]  py-12">
+        <div className="max-w-5xl mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-8">My Projects</h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            {projects.map((project, index) => (
+              <motion.div
+                key={index}
+                className="bg-white rounded-xl shadow-lg transition p-6 flex flex-col hover:shadow-xl"
+                initial="offscreen"
+                whileInView="onscreen"
+                viewport={{ once: true, amount: 0.5 }}
+                variants={cardVariants}
+                whileHover={{ scale: 1.03 }}
+              >
+                <img
+                  src={project.image}
+                  alt={`${project.title} screenshot`}
+                  className="w-full h-48 object-cover rounded-lg mb-4"
+                />
 
-              <h3 className="text-2xl font-semibold mb-3">{project.title}</h3>
-              <p className="text-gray-600 mb-4">{project.description}</p>
-              <div className="mb-4">
-                {project.tech.map((t, i) => (
-                  <span
-                    key={i}
-                    className="inline-block bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm mr-2 mb-2"
+                <h3 className="text-2xl font-semibold mb-3">{project.title}</h3>
+                <p className="text-gray-600 mb-4">{project.description}</p>
+                <div className="mb-4">
+                  {project.tech.map((t, i) => (
+                    <span
+                      key={i}
+                      className="inline-block bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm mr-2 mb-2"
+                    >
+                      {t}
+                    </span>
+                  ))}
+                </div>
+                <div className="mt-auto flex space-x-4">
+                  <a
+                    href={project.live}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-black text-white px-4 py-2 rounded-lg hover:bg-white hover:text-black transition"
                   >
-                    {t}
-                  </span>
-                ))}
-              </div>
-              <div className="mt-auto flex space-x-4">
-                <a
-                  href={project.live}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-black text-white px-4 py-2 rounded-lg hover:bg-white hover:text-black transition"
-                >
-                  Live Demo
-                </a>
-                <a
-                  href={project.code}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-black text-white px-4 py-2 rounded-lg hover:bg-white hover:text-black transition"
-                >
-                  Code
-                </a>
-              </div>
-            </motion.div>
-          ))}
+                    Live Demo
+                  </a>
+                  <a
+                    href={project.code}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-black text-white px-4 py-2 rounded-lg hover:bg-white hover:text-black transition"
+                  >
+                    Code
+                  </a>
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+    </Element>
   );
 };
 

@@ -1,12 +1,13 @@
 import React from 'react';
+import { Link } from 'react-scroll';
 
 const Navbar = () => {
     const links = <>
     <li className='mx-2 font-bold'>Home</li>
-    <li className='mx-2 font-bold'>About</li>
-    <li className='mx-2 font-bold'>Skills</li>
-    <li className='mx-2 font-bold'>Project</li>
-    <li className='mx-2 font-bold'>Contact</li>
+    <Link className='mx-2 font-bold' to="about" smooth={true} duration={500}>About</Link>
+    <Link className='mx-2 font-bold' to="skills" smooth={true} duration={500}>Skills</Link>
+    <Link className='mx-2 font-bold' to="projects" smooth={true} duration={500}>Project</Link>
+    <Link className='mx-2 font-bold' to="contact" smooth={true} duration={500}>Contact</Link>
     </>
 
 return (
