@@ -33,15 +33,11 @@ const About = () => {
                 >
                     <h2 className="  border-b  text-2xl md:3xl font-semibold basic-font mb-4">About Me</h2>
                     <p className="text-gray-600 raleway mb-4 leading-relaxed">
-                        I'm a passionate <span className="text-black font-semibold">Web Developer</span>
+                        I started my studies in Philosophy, where I learned to think deeply, solve problems, and see things from different angles. I’ve always loved reading—books have opened my mind to new ideas about how people think, connect, and create.
 
-                        who loves crafting clean, functional, and visually appealing websites.
-                        With a strong focus on <span className="text-black font-semibold">MERN stack</span> development,
-                        I create seamless digital experiences that not only look good but work flawlessly.
-                    </p>
-                    <p className="text-gray-700 mb-6 leading-relaxed">
-                        When I’m not coding, you’ll probably find me learning new tech,
-                        exploring design ideas, or improving performance of my projects.
+                        Over time, I wanted to turn my ideas into something real and useful. That’s when I found coding. It’s a place where logic and creativity work together, and where I can build things that people can actually use.
+
+                        Now, I bring together what I learned from philosophy with my skills in web development, creating projects that are both thoughtful and functional. For me, every project has a story—and mine is driven by curiosity and a love of learning.
                     </p>
                     <a
                         href="#contact"
