@@ -1,6 +1,7 @@
 import React from 'react';
 import image from '../assets/image.jpg'
 import { Github, Linkedin } from 'lucide-react';
+import { FiDownload } from 'react-icons/fi';
 
 
 const Banner = () => {
@@ -17,6 +18,14 @@ const Banner = () => {
                     <h2 className='text-sm font-semibold text-gray-600'>MERN Stack Developer / Frontend Specalist</h2>
 
                     <div className='flex space-x-3'>
+                        <button
+                            className="inline-flex items-center text-white bg-black hover:bg-white hover:text-black px-5 py-3 rounded-lg font-semibold transition"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <FiDownload className="mr-2 text-lg" />
+                            Download Resume
+                        </button>
                         <a
                             href='https://github.com/rayhanbri'
                             target="_blank"
